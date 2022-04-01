@@ -1,0 +1,22 @@
+1) Tenha o hábito de usar o comando 'gofmt' para formatar seu código automaticamente, evitando trivialidades.
+
+2) Um mapa (map) armazena um conjunto de pares chave/valor e oferece operações para armazenar, recuperar ou testar item do conjunto,
+em tempo constante - isto é, seu desempenho independe do números de itens no mapa. 
+    2.1) A chave pode ser qualquer tipo cujos valores possam ser comparados com ==, e as strings são o exemplo mais comum; o valor pode
+    ser de qualquer tipo.
+
+3) Verbs (verbos): conversão utilizada na função Printf.
+    3.1) %d inteiro em formato decimal;
+    3.2) %x, %o, %b inteiro no formato hexadecimal, octal, binário;
+    3.3) %d, %g, %e número de ponto flutuante;
+    3.5) %t booleano;
+    3.6) %c runa (código Unicode, exibido como caractere);
+    3.7) %s string;
+    3.8) %q string "abc" ou runa 'c' entre aspas;
+    3.9) %v qualquer valor em um formato natural;
+    3.10) %T tipo de qualquer valor;
+    3.11) %% sinal de porcentagem literal (não indica substituição);
+
+4) String de formatação:
+    4.1) \t tabulação;
+    4.2) \n quebra de linha;
