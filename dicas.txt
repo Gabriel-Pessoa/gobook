@@ -20,3 +20,34 @@ em tempo constante - isto é, seu desempenho independe do números de itens no m
 4) String de formatação:
     4.1) \t tabulação;
     4.2) \n quebra de linha;
+
+5) Go tem 25 palavras reservadas, como if e switch, que podem ser usadas somente onde a sintaxe permite:
+    5.1 ) break, default, func, interface, select, case, defer, go, map, struct, chan, else, goto, package, switch,
+        const, fallthrough, if, range, type, continue, for, import, return e valor;
+    
+    5.2) Nome de funções, variáveis, constantes, tipos, rótulos de intruções e pacotes go seguem uma regra simples: um nome começa com uma literal
+    ou um underscore, e pode ter quantidade de letras, dígitos e underscores adicionais. A maioria dos programadores de Go usam o padrão "camel case"
+    para compor nomes por combinação de palavras.
+
+6) Declarações: uma declaração dá nome a uma entidade do programa e especifica algumas ou todas as  suas propriedades. Há quatro tipos principais de 
+declaração: var, const, type e func. 
+
+7) Organização: um programa Go é armazenado em um ou mais arquivos cujos nomes terminam com .go. Cada arquivo começa com uma declaração "package" que 
+informa o pacote do qual o arquivo faz parte. A declaração "package" é seguinda de qualquer declaração "import" e, em seguida, por uma sequência de 
+declarações de tipos, variáveis, constantes e funções no nível de pacote (package-level), em qualquer ordem. Veja os exemplos 
+
+8) Cada componente de uma variável do tipo agregado (campo de uma struct ou um elemento de um array)
+
+9) Um tipo nomeado (named type) pode ser conveniente quanto à notação se ele ajuda a evitar a necessidade de escrever os tipos complexos repetidadmente.
+Há pouca vantagem quando o tipo subjacente é simples como float64, mas a vantagem é grande para tipos complexos, como estruturas. Tipos nomeados também
+possibilitam definir novos comportamentos para os valores desse tipo. Esses comportamentos são expressos na forma de um conjunto de funções associadas 
+ao tipo chamadas de métodos do tipo (Ver arquivo: ch2/named_type ). 
+
+10) Se o pacote tiver vários arquivos .go, eles serão inicializados na ordem em os arquivos são fornecidos ao compilador; a ferramenta go ordena arquivos
+.go pelo nome antes de chamar o compilador. Cada variável declarada no nível de pacote nasce com valor de sua expressão de inicialização, var x int => x = 0.  
+
+11) Um pacote é inicializado de cada vez, na ordem das importações no programa -em primeiro lugar as dependências- portanto, um pacote p que importe q pode ter
+certeza de que q estará totalmente inicializado antes que a inicialização de p comece. A inicialização ocorre de baixo pra cima; o pacote main é o último a ser
+inicializado. Dessa forma, todos os pacotes são completamente inicializados antes que a função main da aplicação comece.
+
+12) É uma prática comum em Go lidar com o erro no bloco if e então retornar, para que o caminho da execução bem-sucedido não fique indentado.
